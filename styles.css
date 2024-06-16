@@ -1,0 +1,33 @@
+.carousel-item img {
+    object-fit: cover;
+    height: 70vh; 
+}
+.carousel-inner {
+    height: 70vh; 
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+  }
+  .footer {
+    background-color: #000000;
+    padding: 10px 0;
+    color: white;
+  }
+  .footer img {
+    width: 40px;
+    margin-right: 10px; 
+  }
+  .footer a{
+    text-decoration: none;
+  }
+  .footer-text {
+    display: flex;
+    align-items: center;
+  }
+
+  #txtMessage {
+    resize: none;
+}
+
