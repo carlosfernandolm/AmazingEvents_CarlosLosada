@@ -10,36 +10,201 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./Home.html">
-                    <img src="./assets/amazing_brand.png" alt="Bootstrap" width="100" height="24">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="./Home.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="./Upcoming_Events.html">UPCOMING EVENTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="./Past_Events.html">PAST EVENTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="./Contact.html">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="./Stats.html">STATS</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./assets/amazing_brand.png"
+                alt="Logo"
+                width="100"
+                height="30"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="./Home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./UpcomingEvents.html"
+                    >UPCOMING EVENTS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./PastEvents.html">PAST EVENTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Contact.html">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Stats.html">STATS</a>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
-    </header>
+      </header>
+
+      <main>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/optional_banner_2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/optional_banner_3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/optional_banner_5.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- table -->
+          <div class="container mt-5 ">
+            <table class="table table-bordered border-dark">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th class="table-secondary border-dark" colspan="3">Events Statistics</th>
+                    </tr>
+                    <tr>
+                        <th>Events with highest % of assistance</th>
+                        <th>Events with lowest % of assistance</th>
+                        <th>Events with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="table-secondary border-dark" colspan="3" >Upcoming events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="table-secondary border-dark" colspan="3" >Past events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+      </main>
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <a href="https://web.facebook.com/" target="_blank">
+                <img src="./assets/facebook.png" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="./assets/instagram.png" alt="instagram" />
+              </a>
+              <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="./assets/whatsapp.png" alt="whatsapp" />
+              </a>
+            </div>
+            <div>
+              <p class="mb-0">COHORT</p>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
