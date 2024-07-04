@@ -206,7 +206,7 @@ const data = {
 
       card.innerHTML = `
                   <img
-            src=".${event.image}"
+            src="${event.image}"
             class="card-img-top h-50"   
             alt="${event.name}"
           />

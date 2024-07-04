@@ -205,8 +205,8 @@ const data = {
       card.className = 'card';
 
       card.innerHTML = `
-                  <img
-            src=".${event.image}"
+          <img
+            src="${event.image}"
             class="card-img-top h-50"   
             alt="${event.name}"
           />
@@ -224,5 +224,6 @@ const data = {
       `;
 
       cardContainer.appendChild(card);
+      
     }
   });
