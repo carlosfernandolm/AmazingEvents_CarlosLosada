@@ -227,3 +227,76 @@ const data = {
       
     }
   });
+
+const categories = [...new Set(data.events.map(event => event.category))];
+
+const checkboxContainer = document.createElement('div');
+categories.forEach(category => {
+  const checkboxDiv = document.createElement('div');
+  checkboxDiv.className = 'form-check form-check-inline';
+  checkboxDiv.innerHTML = `
+    <input class="form-check-input" type="checkbox" value="${category}" id="category-${category}">
+    <label class="form-check-label" for="category-${category}">${category}</label>
+  `;
+  checkboxContainer.appendChild(checkboxDiv);
+});
+
+const filtersDiv = document.querySelector('.my-2 .container-fluid .d-flex');
+filtersDiv.insertBefore(checkboxContainer, filtersDiv.firstChild);
+
+
+const searchInput = document.querySelector('input[type="search"]');
+const checkboxes = document.querySelectorAll('.form-check-input');
+
+searchInput.addEventListener('input', filterEvents);
+checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterEvents));
+
+function normalizeString(str) {
+  return str.toLowerCase().trim();
+}
+
+function filterEvents() {
+  const searchText = normalizeString(searchInput.value);
+  const selectedCategories = [...checkboxes]
+    .filter(checkbox => checkbox.checked)
+    .map(checkbox => checkbox.value);
+
+  const filteredEvents = data.events.filter(event => {
+    const normalizedEventName = normalizeString(event.name);
+    const normalizedEventDescription = normalizeString(event.description);
+    const matchesSearch = normalizedEventName.includes(searchText) || normalizedEventDescription.includes(searchText);
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(event.category);
+    return matchesSearch && matchesCategory;
+  });
+
+  displayEvents(filteredEvents);
+}
+
+function displayEvents(events) {
+  cardContainer.innerHTML = '';
+  if (events.length === 0) {
+    cardContainer.innerHTML = '<p>No events match your search criteria.</p>';
+  } else {
+    events.forEach(event => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <img src="${event.image}" class="card-img-top h-50" alt="${event.name}" />
+        <div class="card-body">
+          <h5 class="card-title">${event.description}</h5>
+          <p class="card-text">${event.date}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">${event.price}</span>
+            <a href="./Details.html?id=${event._id}" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      `;
+
+      cardContainer.appendChild(card);
+    });
+  }
+}
+
+// Inicializar con todos los eventos
+displayEvents(data.events);
